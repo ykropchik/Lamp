@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.tcc": "cpp",
+        "istream": "cpp",
+        "typeinfo": "cpp",
+        "sstream": "cpp",
+        "cmath": "cpp",
+        "new": "cpp",
+        "random": "cpp",
+        "limits": "cpp"
+    }
+}
