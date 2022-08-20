@@ -5,16 +5,17 @@
 #include <Vars.h>
 #include <Effects.h>
 
-void connection(void *params) {
+void connection() {
   // auto previousLampStatus = lampStatus;
   // lampStatus = WiFiConnecting;
 
-  // WiFi.begin(ssid, password);
-  // while (WiFi.status() != WL_CONNECTED) {
-  //     delay(500);
-  //     Serial.println("Connecting to WiFi..");
-  // }
+  WiFi.begin("ykropchik", "pasholnaxui");
+  while (WiFi.status() != WL_CONNECTED) {
+      delay(500);
+      Serial.println("Connecting to WiFi..");
+  }
   
+  Serial.println("Connected to the WiFi");
   // lampStatus = previousLampStatus;
 }
 

@@ -1,13 +1,6 @@
 #ifndef SETTINGS
 #define SETTINGS
 
-// MQTT Broker
-inline const char *mqtt_broker = "m8.wqtt.ru";
-inline const char *topic = "esp8266/status";
-inline const char *mqtt_username = "u_HS4YEN";
-inline const char *mqtt_password = "GlyRjJ24";
-inline const int mqtt_port = 12308;
-
 #define PIN 4
 
 #define BTN_PIN 33

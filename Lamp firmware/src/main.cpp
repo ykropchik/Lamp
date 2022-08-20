@@ -7,6 +7,7 @@
 #include <WebServer.h>
 #include <BedLamp.h>
 #include <LampControl.h>
+#include <Mqtt.h>
 
 BedLamp lamp = BedLamp(
 	effects,
@@ -41,10 +42,14 @@ void setup() {
 	FastLED.clear();
 	FastLED.show();
 
+	connection();
+	mqttInitialize();
+
 	xTaskCreatePinnedToCore(lampControlTask, "connectionWaiting", 1000, NULL, 1, &lampControlTaskHandler, 1);
 }
 
 void loop() {
+	Serial.println(WiFi.status());
 	switch (lamp.getStatus()) {
 		case BedLampStatus::WiFiConnecting: 
 			lamp.waitingTick();

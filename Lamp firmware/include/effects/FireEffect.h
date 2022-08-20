@@ -66,7 +66,6 @@ private:
 	// draw a frame, interpolating between 2 "key frames"
 	// @param pcnt percentage of interpolation
 	void drawFrame(uint8_t pcnt) {
-		CHSV hsvColor = rgb2hsv(this->color);
 		int32_t nextv;
 
 		// each row interpolates with the one before it
